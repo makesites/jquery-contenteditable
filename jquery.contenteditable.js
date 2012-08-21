@@ -2,6 +2,8 @@
 //
 // Created by: Makis Tracend (@tracend)
 // Issue: http://stackoverflow.com/a/6263537
+//
+// Licensed under the GPL Version 2: http://www.gnu.org/licenses/gpl-2.0.html
 
 (function( $ ){
 

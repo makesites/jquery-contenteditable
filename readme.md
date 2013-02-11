@@ -1,3 +1,6 @@
+#NOTE: Active Development for this plugin has moved to Makesites.org: 
+[https://github.com/makesites/jquery-contenteditable](https://github.com/makesites/jquery-contenteditable)
+
 # jQuery contentEditable() plugin
 
 Automatically adds events on 'contenteditable' fields and returns the changed data for further processing (and saving)

@@ -33,12 +33,12 @@
 			// setting the key based on an attribute available on the same level as 'contentEditable'
 			var key = $this.attr("data-key");
 			// add triggers
-			$this.live('focus', function() {
+			$this.on('focus', function() {
 				var $this = $(this);
 				$this.data('enter', $this.html());
 				$this.data('before', $this.html());
 				return $this;
-			}).live('keyup paste', function() {
+			}).on('keyup paste', function() {
 				var $this = $(this);
 				var text = $this.html();
 				if ($this.data('before') !== text) {
@@ -48,7 +48,7 @@
 					parent.trigger({type: 'change', action : 'update', changed: data});
 				}
 				return $this;
-			}).live('blur', function() {
+			}).on('blur', function() {
 				var $this = $(this);
 				var text = $this.html();
 				if ($this.data('enter') !== text) {

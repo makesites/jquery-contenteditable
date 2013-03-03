@@ -4,7 +4,7 @@ Automatically adds events on 'contenteditable' fields and returns the changed da
 
 ## Usage
 
-In it's basic implementation, the plugin method contentEditable() is attached to the parent container that has all the 'contenteditable' fields. 
+In its basic implementation, the plugin method contentEditable() is attached to the parent container that has all the 'contenteditable' fields. 
 
 ```
 $("#...").contentEditable().change( myFunction );

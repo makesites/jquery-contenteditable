@@ -2,7 +2,7 @@
 	"name": "contenteditable",
 	"version": "0.1.0",
     "title": "jQuery contentEditable",
-    "description": "Automatically adds events on 'contenteditable' fields and returns the changed data for further processin...",
+    "description": "Automatically adds events on 'contenteditable' fields and returns the changed data for further processing...",
     "keywords": [
         "cms",
         "edit",

@@ -1,9 +1,10 @@
-// jQuery contentEditable() plugin
+// jQuery contentEditable
+// URL: http://plugins.jquery.com/contenteditable
+// Source: http://github.com/makesites/jquery-contenteditable
 //
-// Created by: Makis Tracend (@tracend)
-// Issue: http://stackoverflow.com/a/6263537
-//
-// Licensed under the GPL Version 2: http://www.gnu.org/licenses/gpl-2.0.html
+// Created by [Makis Tracend](http://tracend.me)
+// Distributed by [Makesites.org](http://makesites.org)
+// Released under the [MIT license](http://makesites.org/licenses/MIT)
 
 (function( $ ){
 

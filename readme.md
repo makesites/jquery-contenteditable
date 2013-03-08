@@ -34,4 +34,4 @@ Originally realeased as a [gist](https://gist.github.com/tracend/3410122) to add
 
 Distributed by [Makesites.org](http://makesites.org)
 
-Released under the [MIT license](http://makesites.org/licenses/MIT]
+Released under the [MIT license](http://makesites.org/licenses/MIT)

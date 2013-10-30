@@ -1,6 +1,6 @@
 {
 	"name": "contenteditable",
-	"version": "0.1.1",
+	"version": "0.2.0",
     "title": "jQuery contentEditable",
     "description": "Automatically adds events on 'contenteditable' fields and returns the changed data for further processing...",
     "keywords": [

@@ -12,7 +12,7 @@
 
 	if (typeof define === 'function' && define.amd) {
 		// AMD. Register as an anonymous module.
-		var deps = ['jquery];
+		var deps = ['jquery'];
 		define(deps, lib); // give the module a name
 	} else if ( typeof module === "object" && module && typeof module.exports === "object" ){
 		// Expose as module.exports in loaders that implement CommonJS module pattern.

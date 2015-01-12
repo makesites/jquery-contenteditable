@@ -6,7 +6,23 @@
 // Distributed by [Makesites.org](http://makesites.org)
 // Released under the [MIT license](http://makesites.org/licenses/MIT)
 
-(function( $ ){
+(function (lib) {
+
+	//"use strict";
+
+	if (typeof define === 'function' && define.amd) {
+		// AMD. Register as an anonymous module.
+		var deps = ['jquery];
+		define(deps, lib); // give the module a name
+	} else if ( typeof module === "object" && module && typeof module.exports === "object" ){
+		// Expose as module.exports in loaders that implement CommonJS module pattern.
+		module.exports = lib;
+	} else {
+		// Browser globals
+		var Query = window.jQuery; // not supporting other query engines || window.Zepto || window.vQuery;
+		lib(Query);
+	}
+}(function ( $ ){
 
 var methods = {
 
@@ -78,4 +94,10 @@ var methods = {
 
 	};
 
-})( jQuery );
+	// If there is a window object, that at least has a document property
+	if( typeof window === "object" && typeof window.document === "object" ){
+		// save in the global namespace (not needed?)
+		window.jQuery = $;
+	}
+
+}));

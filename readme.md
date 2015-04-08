@@ -22,6 +22,7 @@ The object that's returned on a "change" event is a standard jQuery Event() obje
 
 * **action** : possible values are _update_ & _save_ , depending on the focus state of the field.
 * **changed** : containing the value of the changed field. the key is defined from a data-key attribute passed in the markup.
+* **changedField** : containing the changed field object.
 
 
 ## Options

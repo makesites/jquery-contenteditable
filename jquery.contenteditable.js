@@ -63,7 +63,7 @@
 						$this.data('before', text);
 						var data = {};
 						data[key] = text;
-						parent.trigger({type: 'change', action : 'update', changed: data});
+						parent.trigger({type: 'change', action : 'update', changed: data, changedField: $this});
 					}
 					return $this;
 				}).on('blur', function() {
@@ -73,7 +73,7 @@
 						$this.data('enter', text);
 						var data = {};
 						data[key] = text;
-						parent.trigger({type: 'change', action : 'save', changed: data});
+						parent.trigger({type: 'change', action : 'save', changed: data, changedField: $this});
 					}
 					return $this;
 				})

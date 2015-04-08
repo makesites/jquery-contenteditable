@@ -34,11 +34,12 @@ Currently there are no parameters for this plugin.
 
 Initiated by [Makis Tracend](http://github.com/tracend)
 
-Originally realeased as a [gist](https://gist.github.com/tracend/3410122) to address [this issue](http://stackoverflow.com/a/6263537)
+Distributed through [Makesites.org](http://makesites.org)
 
-Distributed by [Makesites.org](http://makesites.org)
+### Trivia
 
+Originally released as a [gist](https://gist.github.com/tracend/3410122) to address [this issue](http://stackoverflow.com/a/6263537)
 
-## License
+### License
 
 Released under the [MIT license](http://makesites.org/licenses/MIT)

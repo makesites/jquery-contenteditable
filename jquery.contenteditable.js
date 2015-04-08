@@ -6,7 +6,7 @@
 // Distributed by [Makesites.org](http://makesites.org)
 // Released under the [MIT license](http://makesites.org/licenses/MIT)
 
-(function (lib) {
+(function( lib ) {
 
 	//"use strict";
 
@@ -22,65 +22,64 @@
 		var Query = window.jQuery; // not supporting other query engines || window.Zepto || window.vQuery;
 		lib(Query);
 	}
-}(function ( $ ){
+}(function( $ ) {
 
-var methods = {
+	var methods = {
 
 		init : function( options ) {
 
-			 return this.each(function(){
+			return this.each(function() {
 
-			var $this = $(this);
+				var $this = $(this);
 
-			//reset any previous change events set
-			$this.unbind("change");
+				//reset any previous change events set
+				$this.unbind("change");
 
-			$this.find('[contenteditable]').each(function(){
+				$this.find('[contenteditable]').each(function() {
 
-				$(this).contentEditable("field", $this);
+					$(this).contentEditable("field", $this);
 
-			});
-
+				});
 			});
 		},
 
 		field : function( parent ) {
 
-		return this.each(function(){
+			return this.each(function() {
 
+				var $this = $(this);
+				// setting the key based on an attribute available on the same level as 'contentEditable'
+				var key = $this.attr("data-key");
+				// add triggers
+				$this.on('focus', function() {
 					var $this = $(this);
-			// setting the key based on an attribute available on the same level as 'contentEditable'
-			var key = $this.attr("data-key");
-			// add triggers
-			$this.on('focus', function() {
-				var $this = $(this);
-				$this.data('enter', $this.html());
-				$this.data('before', $this.html());
-				return $this;
-			}).on('keyup paste', function() {
-				var $this = $(this);
-				var text = $this.html();
-				if ($this.data('before') !== text) {
-					$this.data('before', text);
-					var data = {};
-					data[key] = text;
-					parent.trigger({type: 'change', action : 'update', changed: data});
-				}
-				return $this;
-			}).on('blur', function() {
-				var $this = $(this);
-				var text = $this.html();
-				if ($this.data('enter') !== text) {
-					$this.data('enter', text);
-					var data = {};
-					data[key] = text;
-					parent.trigger({type: 'change', action : 'save', changed: data});
-				}
-				return $this;
-			})
-		});
-	}
-};
+					$this.data('enter', $this.html());
+					$this.data('before', $this.html());
+					return $this;
+				}).on('keyup paste', function() {
+					var $this = $(this);
+					var text = $this.html();
+					if ($this.data('before') !== text) {
+						$this.data('before', text);
+						var data = {};
+						data[key] = text;
+						parent.trigger({type: 'change', action : 'update', changed: data, changedField: $this});
+					}
+					return $this;
+				}).on('blur', function() {
+					var $this = $(this);
+					var text = $this.html();
+					if ($this.data('enter') !== text) {
+						$this.data('enter', text);
+						var data = {};
+						data[key] = text;
+						parent.trigger({type: 'change', action : 'save', changed: data, changedField: $this});
+					}
+					return $this;
+				})
+			});
+		}
+	};
 
 	$.fn.contentEditable = function( method ) {
 

@@ -1,6 +1,6 @@
 # jQuery contentEditable
 
-Automatically adds events on 'contenteditable' fields and returns the changed data for further processing (and saving)
+Automatically adds events on 'contenteditable' fields and returns the changed data for further processing (and saving).
 
 
 ## Usage
@@ -21,19 +21,20 @@ Note that this only needs to be executed once for all included fields of the con
 The object that's returned on a "change" event is a standard jQuery Event() object with the addition of these variables:
 
 * **action** : possible values are _update_ & _save_ , depending on the focus state of the field.
-* **changed** : containing the value of the changed field. the key is defined from a data-key attribute passed in the markup.
+* **changed** : containing the value of the changed field. The key is defined from a data-key attribute passed in the markup.
+* **changedField** : containing the changed field object.
 
 
 ## Options
 
-Currently there are no parameters for this plugin
+Currently there are no parameters for this plugin.
 
 
 ## Credits
 
 Initiated by [Makis Tracend](http://github.com/tracend)
 
-Originally realeased as a [gist](https://gist.github.com/tracend/3410122) to address [this issue](http://stackoverflow.com/a/6263537).
+Originally realeased as a [gist](https://gist.github.com/tracend/3410122) to address [this issue](http://stackoverflow.com/a/6263537)
 
 Distributed by [Makesites.org](http://makesites.org)
 

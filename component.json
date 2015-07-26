@@ -3,6 +3,6 @@
 	"version": "0.2.0",
 	"main": ["./jquery.contenteditable.js"],
 	"dependencies": {
-		"jquery": "~2.0.3"
+		"jquery": ">=1.7.2"
 	}
 }
